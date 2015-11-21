@@ -56,14 +56,8 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
         @Override
         public void onClick(View v) {
-            String text = poleTextowe.getText().toString();
+          //teraz bedzie wersja dla tabletu
 
-            //wysylamy intent po kliknieciu
-            Intent detailsIntent = new Intent(v.getContext(), SzczegolyActivity.class);
-            //pobieramy klucz z fragmentu
-            detailsIntent.putExtra(SzczegolyFragment.ARG_TEXT,text);
-
-            v.getContext().startActivity(detailsIntent);
         }
     }
 }
