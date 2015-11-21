@@ -16,7 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import domenafirmy.lastweek.R;
 
-public class LsitaFragment extends Fragment{ //fragment z support.v4
+public class LsitaFragment extends Fragment implements CityAdapter.OnItemClick { //fragment z support.v4
 
     @Bind(R.id.lista)
     protected RecyclerView lista;
@@ -51,5 +51,12 @@ public class LsitaFragment extends Fragment{ //fragment z support.v4
         ));
 
         lista.setAdapter(adapter);
+
+        adapter.setClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(String item) {
+
     }
 }
