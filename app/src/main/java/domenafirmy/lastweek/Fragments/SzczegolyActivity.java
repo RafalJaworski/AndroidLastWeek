@@ -13,6 +13,8 @@ public class SzczegolyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_szczegoly);
 
         SzczegolyFragment fragment = new SzczegolyFragment();
+        //w intencie mamy argumenty z aktywnosci wiec przekazujemy jedo fragmancie
+        fragment.setArguments(getIntent().getExtras());
         //w aktywnosciach jest fragment manager z suportem
         //chcemy dodac fragment
         getSupportFragmentManager()
