@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import domenafirmy.lastweek.R;
 
 public class LsitaFragment extends Fragment{ //fragment z support.v4
@@ -30,5 +31,9 @@ public class LsitaFragment extends Fragment{ //fragment z support.v4
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //pola sa we fragmencie a nie aktywnosci wiec metoda bind z 2 parametrami
+        //target czyli tam gdzie sa bindy(pola)
+        //view  - na podstawie czego ma sobie target uzupelnic
+        ButterKnife.bind(this,view);
     }
 }
