@@ -1,6 +1,7 @@
 package domenafirmy.lastweek.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import domenafirmy.lastweek.Fragments.SzczegolyActivity;
+import domenafirmy.lastweek.Fragments.SzczegolyFragment;
 
 
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder>{
@@ -45,13 +49,21 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
         public CityViewHolder(View itemView) {
             super(itemView);
+            //itemView to jeden el listy ktory mozemy kliknac
             itemView.setOnClickListener(this);
             poleTextowe = (TextView) itemView.findViewById(android.R.id.text1);
         }
 
         @Override
         public void onClick(View v) {
+            String text = poleTextowe.getText().toString();
 
+            //wysylamy intent po kliknieciu
+            Intent detailsIntent = new Intent(v.getContext(), SzczegolyActivity.class);
+            //pobieramy klucz z fragmentu
+            detailsIntent.putExtra(SzczegolyFragment.ARG_TEXT,text);
+
+            v.getContext().startActivity(detailsIntent);
         }
     }
 }
