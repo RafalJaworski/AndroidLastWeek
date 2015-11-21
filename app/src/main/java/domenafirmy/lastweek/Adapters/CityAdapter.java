@@ -18,11 +18,16 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
     private List<String> dane;
     private LayoutInflater inflater;
+    public OnItemClick clickListener;
 
     //musimy dodac context bo inflater bierze sie z contextu
     public CityAdapter(Context context, List<String> dane) {
         this.dane = dane;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    public void setClickListener(OnItemClick clickListener) {
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -41,6 +46,12 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
     @Override
     public int getItemCount() {
         return dane.size();
+    }
+
+    //interfejs definiujacy sposob powiadamiania o kliknieciu elementu
+    public interface OnItemClick
+    {
+        public void onItemClick(String item);
     }
 
     public static class CityViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
