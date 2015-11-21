@@ -23,7 +23,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
     @Override
     public CityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+        //nie wiemy gdzie wcisnac ten widok wiec piszemy null
         View view = inflater.inflate(android.R.layout.simple_list_item_1,null);
         return new CityViewHolder(view);
     }
@@ -31,7 +31,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
     @Override
     public void onBindViewHolder(CityViewHolder holder, int position) {
-
+        holder.poleTextowe.setText(dane.get(position));
     }
 
     @Override
