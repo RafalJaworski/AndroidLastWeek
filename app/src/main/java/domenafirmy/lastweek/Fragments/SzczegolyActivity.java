@@ -11,5 +11,13 @@ public class SzczegolyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_szczegoly);
+
+        SzczegolyFragment fragment = new SzczegolyFragment();
+        //w aktywnosciach jest fragment manager z suportem
+        //chcemy dodac fragment
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.container, fragment)
+                .commit();
     }
 }
