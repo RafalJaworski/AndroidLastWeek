@@ -22,12 +22,17 @@ public class LsitaFragment extends Fragment implements CityAdapter.OnItemClick {
     @Bind(R.id.lista)
     protected RecyclerView lista;
     private CityAdapter adapter;
+    private CityAdapter.OnItemClick clickListener;
 
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
+        if(context instanceof CityAdapter.OnItemClick){
+            clickListener = (CityAdapter.OnItemClick) context;
+        }else{
+            throw new ClassCastException("Activity powinno implementowac OnItemClick");
+        }
     }
 
     @Nullable
