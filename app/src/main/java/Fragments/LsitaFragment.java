@@ -21,4 +21,9 @@ public class LsitaFragment extends Fragment{ //fragment z support.v4
         //attach to Root = false - zwraca ale nie todaje do konttenera
         return inflater.inflate(R.layout.fragment_lista,container,false);
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
 }
