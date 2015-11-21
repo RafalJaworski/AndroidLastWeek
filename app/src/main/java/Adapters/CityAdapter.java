@@ -5,8 +5,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import java.util.List;
+
 
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder>{
+
+    private List<String> dane;
+
+    public CityAdapter(List<String> dane) {
+        this.dane = dane;
+    }
 
     @Override
     public CityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
