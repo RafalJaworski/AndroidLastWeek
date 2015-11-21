@@ -3,7 +3,7 @@ package Adapters;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -33,8 +33,13 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
     }
 
     public static class CityViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView poleTextowe;
+
         public CityViewHolder(View itemView) {
             super(itemView);
+
+            poleTextowe = (TextView) itemView.findViewById(android.R.id.text1);
         }
     }
 }
