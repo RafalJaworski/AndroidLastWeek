@@ -23,7 +23,9 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
     @Override
     public CityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+
+        View view = inflater.inflate(android.R.layout.simple_list_item_1,null);
+        return new CityViewHolder(view);
     }
 
 
