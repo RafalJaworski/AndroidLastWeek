@@ -1,7 +1,7 @@
 package domenafirmy.lastweek.Fragments;
 
-/**
- * Created by jawa on 21/11/2015.
- */
-public class SzczegolyFragment {
+import android.support.v4.app.Fragment;
+
+
+public class SzczegolyFragment extends Fragment{
 }
