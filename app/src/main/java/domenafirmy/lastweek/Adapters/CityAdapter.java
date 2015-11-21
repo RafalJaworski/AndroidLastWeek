@@ -39,14 +39,19 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
         return dane.size();
     }
 
-    public static class CityViewHolder extends RecyclerView.ViewHolder {
+    public static class CityViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView poleTextowe;
 
         public CityViewHolder(View itemView) {
             super(itemView);
-
+            itemView.setOnClickListener(this);
             poleTextowe = (TextView) itemView.findViewById(android.R.id.text1);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }
