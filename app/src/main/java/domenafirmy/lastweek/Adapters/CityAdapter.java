@@ -1,4 +1,4 @@
-package Adapters;
+package domenafirmy.lastweek.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

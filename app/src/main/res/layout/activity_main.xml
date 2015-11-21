@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/lista_fragment"
-        android:name="Fragments.LsitaFragment"
+        android:name="domenafirmy.lastweek.Fragments.LsitaFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </RelativeLayout>

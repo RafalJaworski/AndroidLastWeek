@@ -1,4 +1,4 @@
-package Fragments;
+package domenafirmy.lastweek.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import java.util.Arrays;
 
-import Adapters.CityAdapter;
+import domenafirmy.lastweek.Adapters.CityAdapter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import domenafirmy.lastweek.R;
