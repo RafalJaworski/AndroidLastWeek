@@ -3,11 +3,15 @@ package Fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Arrays;
+
+import Adapters.CityAdapter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import domenafirmy.lastweek.R;
@@ -16,6 +20,7 @@ public class LsitaFragment extends Fragment{ //fragment z support.v4
 
     @Bind(R.id.lista)
     protected RecyclerView lista;
+    private CityAdapter adapter;
 
     @Nullable
     @Override
@@ -35,5 +40,14 @@ public class LsitaFragment extends Fragment{ //fragment z support.v4
         //target czyli tam gdzie sa bindy(pola)
         //view  - na podstawie czego ma sobie target uzupelnic
         ButterKnife.bind(this,view);
+
+        //musimy powiedziec recyclerView jak ma wyswietlac
+        //nie jestesmy w activity tylko we fragmencie wiec nit  mozemy uzyc this tylko getActivity
+        lista.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        //zamiast tworzyc obj i robic add("warszawa")
+        adapter = new CityAdapter(getActivity(), Arrays.asList(
+                "warszawa","lodz","wroclaw","zdunska","sieradz","opole"
+        ));
     }
 }
