@@ -34,7 +34,8 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
     public CityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //nie wiemy gdzie wcisnac ten widok wiec piszemy null
         View view = inflater.inflate(android.R.layout.simple_list_item_1,null);
-        return new CityViewHolder(view);
+        //nizej dopisalismy adapter jako parametr wiec dopisujemy this - bierzacy adapter
+        return new CityViewHolder(this,view);
     }
 
 
@@ -57,17 +58,20 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
     public static class CityViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView poleTextowe;
+        private CityAdapter adapter;
 
-        public CityViewHolder(View itemView) {
+        //przesylamy adapter zeby moc wykonywac metody na polu clickListener
+        public CityViewHolder(CityAdapter adapter, View itemView) {
             super(itemView);
             //itemView to jeden el listy ktory mozemy kliknac
             itemView.setOnClickListener(this);
             poleTextowe = (TextView) itemView.findViewById(android.R.id.text1);
+            this.adapter = adapter;
         }
 
         @Override
         public void onClick(View v) {
-          //teraz bedzie wersja dla tabletu
+
 
         }
     }
