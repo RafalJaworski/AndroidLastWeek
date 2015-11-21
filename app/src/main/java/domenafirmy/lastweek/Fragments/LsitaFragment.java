@@ -70,6 +70,6 @@ public class LsitaFragment extends Fragment implements CityAdapter.OnItemClick {
 
     @Override
     public void onItemClick(String item) {
-
+        if(clickListener != null ) clickListener.onItemClick(item);
     }
 }
