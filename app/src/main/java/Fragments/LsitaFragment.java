@@ -49,5 +49,7 @@ public class LsitaFragment extends Fragment{ //fragment z support.v4
         adapter = new CityAdapter(getActivity(), Arrays.asList(
                 "warszawa","lodz","wroclaw","zdunska","sieradz","opole"
         ));
+
+        lista.setAdapter(adapter);
     }
 }
