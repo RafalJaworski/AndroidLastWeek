@@ -71,7 +71,13 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
         @Override
         public void onClick(View v) {
-
+            if(adapter.clickListener != null)
+            {
+                //informujemy clickListener o kliknieciu danego elementu
+                adapter.clickListener.onItemClick(
+                        poleTextowe.getText().toString()
+                );
+            }
 
         }
     }
