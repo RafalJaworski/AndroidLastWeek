@@ -1,7 +1,9 @@
-package domenafirmy.lastweek;
+package Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import domenafirmy.lastweek.R;
 
 public class MainActivity extends AppCompatActivity {
 
