@@ -29,7 +29,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dane.size();
     }
 
     public static class CityViewHolder extends RecyclerView.ViewHolder {
